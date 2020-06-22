@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/day03_ListAndSet/day03_ListAndSet.iml" filepath="$PROJECT_DIR$/day03_ListAndSet/day03_ListAndSet.iml" />
       <module fileurl="file://$PROJECT_DIR$/day04_Map/day04_Map.iml" filepath="$PROJECT_DIR$/day04_Map/day04_Map.iml" />
       <module fileurl="file://$PROJECT_DIR$/day05_ExceptionAndThread/day05_ExceptionAndThread.iml" filepath="$PROJECT_DIR$/day05_ExceptionAndThread/day05_ExceptionAndThread.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day06_Thread/day06_Thread.iml" filepath="$PROJECT_DIR$/day06_Thread/day06_Thread.iml" />
       <module fileurl="file://$PROJECT_DIR$/javase.iml" filepath="$PROJECT_DIR$/javase.iml" />
     </modules>
   </component>
