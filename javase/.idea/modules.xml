@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/day01_API/day01_API.iml" filepath="$PROJECT_DIR$/day01_API/day01_API.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day02_CollectionAndReflect/day02_CollectionAndReflect.iml" filepath="$PROJECT_DIR$/day02_CollectionAndReflect/day02_CollectionAndReflect.iml" />
       <module fileurl="file://$PROJECT_DIR$/javase.iml" filepath="$PROJECT_DIR$/javase.iml" />
     </modules>
   </component>
