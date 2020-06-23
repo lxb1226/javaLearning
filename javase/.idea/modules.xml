@@ -11,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/day07_ThreadAndLambda/day07_ThreadAndLambda.iml" filepath="$PROJECT_DIR$/day07_ThreadAndLambda/day07_ThreadAndLambda.iml" />
       <module fileurl="file://$PROJECT_DIR$/day08_FileAndRecursion/day08_FileAndRecursion.iml" filepath="$PROJECT_DIR$/day08_FileAndRecursion/day08_FileAndRecursion.iml" />
       <module fileurl="file://$PROJECT_DIR$/day09_IOAndOutputStream/day09_IOAndOutputStream.iml" filepath="$PROJECT_DIR$/day09_IOAndOutputStream/day09_IOAndOutputStream.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day10_IO/day10_IO.iml" filepath="$PROJECT_DIR$/day10_IO/day10_IO.iml" />
       <module fileurl="file://$PROJECT_DIR$/javase.iml" filepath="$PROJECT_DIR$/javase.iml" />
     </modules>
   </component>
