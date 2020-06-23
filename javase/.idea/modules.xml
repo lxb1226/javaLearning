@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/day05_ExceptionAndThread/day05_ExceptionAndThread.iml" filepath="$PROJECT_DIR$/day05_ExceptionAndThread/day05_ExceptionAndThread.iml" />
       <module fileurl="file://$PROJECT_DIR$/day06_Thread/day06_Thread.iml" filepath="$PROJECT_DIR$/day06_Thread/day06_Thread.iml" />
       <module fileurl="file://$PROJECT_DIR$/day07_ThreadAndLambda/day07_ThreadAndLambda.iml" filepath="$PROJECT_DIR$/day07_ThreadAndLambda/day07_ThreadAndLambda.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day08_FileAndRecursion/day08_FileAndRecursion.iml" filepath="$PROJECT_DIR$/day08_FileAndRecursion/day08_FileAndRecursion.iml" />
       <module fileurl="file://$PROJECT_DIR$/javase.iml" filepath="$PROJECT_DIR$/javase.iml" />
     </modules>
   </component>
