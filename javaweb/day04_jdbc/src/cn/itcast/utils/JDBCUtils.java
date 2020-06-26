@@ -1,6 +1,5 @@
 package cn.itcast.utils;
 
-import jdk.nashorn.internal.scripts.JD;
 
 import java.io.FileReader;
 import java.io.IOException;
