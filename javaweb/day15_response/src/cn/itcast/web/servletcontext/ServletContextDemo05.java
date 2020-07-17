@@ -8,15 +8,23 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/servletContextDemo04")
-public class ServletContextDemo04 extends HttpServlet {
+@WebServlet("/servletContextDemo05")
+public class ServletContextDemo05 extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         // 获取文件的MIME TYPE
         ServletContext context = this.getServletContext();
-       // 获取数据
-        Object msg = context.getAttribute("msg");
-        System.out.println(msg);
+       // 获取文件的服务器路径
+        String realPath = context.getRealPath("/b.txt");
+        System.out.println(realPath);
+
+        // WEB-INF目录下的资源访问
+        String c = context.getRealPath("/WEB-INF/c.txt");
+        System.out.println(c);
+
+        // src目录下的资源访问
+        String a = context.getRealPath("/WEB-INF/classes/a.txt");
+        System.out.println(a);
 
     }
 

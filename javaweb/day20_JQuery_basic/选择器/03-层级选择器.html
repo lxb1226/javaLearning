@@ -36,7 +36,16 @@
 			
 	 </style>
     <script type="text/javascript">
-	
+	$(function () {
+		// <input type="button" value=" 改变 <body> 内所有 <div> 的背景色为红色"  id="b1"/>
+		$("#b1").click(function () {
+			$("body div").css("backgroundColor", "red");
+		});
+		// <input type="button" value=" 改变 <body> 内子 <div> 的背景色为 红色"  id="b2"/>
+		$("#b2").click(function () {
+			$("body > div").css("backgroundColor", "pink");
+		});
+	})
 		
 		
 	</script>

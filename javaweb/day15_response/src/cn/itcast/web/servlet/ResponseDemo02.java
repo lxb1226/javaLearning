@@ -7,15 +7,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("responseDemo01")
-public class ResponseDemo01 extends HttpServlet {
+@WebServlet("/responseDemo02")
+public class ResponseDemo02 extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // 访问/responseDem01,会自动跳转到/responseDemo02资源
-        // 1.
+        System.out.println("demo02....");
 
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        this.doPost(request, response);
     }
 }

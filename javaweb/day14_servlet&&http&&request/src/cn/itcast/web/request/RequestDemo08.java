@@ -6,19 +6,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.Enumeration;
-import java.util.Map;
-import java.util.Set;
 
-@WebServlet("/requestDemo07")
-public class RequestDemo07 extends HttpServlet {
+@WebServlet("/requestDemo08")
+public class RequestDemo08 extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // 1.设置流的编码
-        // 解决post乱码
-        request.setCharacterEncoding("utf-8");
-        String username = request.getParameter("username");
+        System.out.println("demo8被访问了");
+        // 转发到demo9
 
-        System.out.println(username);
+        // 存储数据到request域中
+        request.setAttribute("msg", "hello");
+        request.getRequestDispatcher("/requestDemo09").forward(request, response);
 
     }
 

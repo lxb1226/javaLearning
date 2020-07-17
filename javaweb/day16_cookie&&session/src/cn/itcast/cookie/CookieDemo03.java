@@ -11,18 +11,15 @@ import java.io.IOException;
 /**
  * cookie的快速入门
  */
-@WebServlet("/cookieDemo02")
-public class CookieDemo02 extends HttpServlet {
+@WebServlet("/cookieDemo03")
+public class CookieDemo03 extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // 获取Cookie
-        Cookie[] cs = request.getCookies();
-        if(cs != null){
-            for(Cookie c: cs){
-                String name = c.getName();
-                String value = c.getValue();
-                System.out.println(name + "-->" + value);
-            }
-        }
+       Cookie c1 = new Cookie("msg", "hello");
+       Cookie c2 = new Cookie("name", "zhangsan");
+
+       response.addCookie(c1);
+       response.addCookie(c2);
+
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

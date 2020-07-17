@@ -1,4 +1,4 @@
-package com.itheima.travel.web.servlet;
+package cn.itcast.web.servlet;
 
 import java.awt.Color;
 import java.awt.Font;

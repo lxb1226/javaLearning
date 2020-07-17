@@ -27,6 +27,17 @@
 		<script>
 
 			//需求：实现下拉列表选择条目左右选择功能
+			$(function () {
+				$("#toRight").click(function () {
+					var options = $("#leftName option:selected");
+					$("#rightName").append(options);
+				});
+
+				$("#toLeft").click(function () {
+					var options = $("#rightName option:selected");
+					$("#leftName").append(options);
+				});
+			})
 
 
 		</script>

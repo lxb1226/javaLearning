@@ -1,74 +1,128 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
-  <head>
+<head>
     <title>内部插入脚本</title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-	<script  src="../js/jquery-3.3.1.min.js"></script>
-	<style type="text/css">
-		 	div,span{
-			    width: 140px;
-			    height: 140px;
-			    margin: 20px;
-			    background: #9999CC;
-			    border: #000 1px solid;
-				float:left;
-			    font-size: 17px;
-			    font-family:Roman;
-			}
-			
-			div .mini{
-			    width: 30px;
-			    height: 30px;
-			    background: #CC66FF;
-			    border: #000 1px solid;
-			    font-size: 12px;
-			    font-family:Roman;
-			}
-			
-			div.visible{
-				display:none;
-			}
-	 </style>
-	 <script type="text/javascript">
-		 // <input type="button" value="将反恐放置到city的后面"  id="b1"/>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <style type="text/css">
+        div, span {
+            width: 140px;
+            height: 140px;
+            margin: 20px;
+            background: #9999CC;
+            border: #000 1px solid;
+            float: left;
+            font-size: 17px;
+            font-family: Roman;
+        }
 
-		 // <input type="button" value="将反恐放置到city的最前面"  id="b2"/>
+        div .mini {
+            width: 30px;
+            height: 30px;
+            background: #CC66FF;
+            border: #000 1px solid;
+            font-size: 12px;
+            font-family: Roman;
+        }
 
-		 // <input type="button" value="将反恐插入到天津后面"  id="b3"/>
+        div.visible {
+            display: none;
+        }
+    </style>
+    <script type="text/javascript">
+        /*
+        CRUD操作：
+            1.append():父元素将子元素追加到末尾
+                * 对象1.append(对象2):将对象2添加到对象1元素内部，并且在末尾
+            2.prepend():父元素将子元素追加到开头
+                * 对象1.prepend(对象2):将对象2添加到对象1元素内部，并且在开头
+            3.appendTo():和append相反：将对象1添加到对象2内部，并且在末尾
+            4.prependTo():和prepend相反：将对象1添加到对象2内部，并且在末尾
 
-		 // <input type="button" value="将反恐插入到天津前面"  id="b4"/>
-		 
+            5.after():添加元素到元素后边
+                * 对象1.after(对象2)：将对象2添加到对象1后面，对象1和对象2是兄弟关系
+            6.before():添加
+                * 对象1.after(对象2)：将对象2添加到对象1后面，对象1和对象2是兄弟关系
 
-		
-	</script>
-	 
-	 
-	</head>
-	 
-	<body>
+            7.insertAfter():
+                * 对象1.insertAfter(对象2):将对象2添加到对象1后边，对象1和对象2是兄弟关系
+            8.insertBefore():
+                * 对象1.insertBefore(对象2):将对象2添加到对象1前边，对象1和对象2是兄弟关系
 
-		<input type="button" value="将反恐放置到city的后面"  id="b1"/>
-		<input type="button" value="将反恐放置到city的最前面"  id="b2"/>
-		<input type="button" value="将反恐插入到天津后面"  id="b3"/>
-		<input type="button" value="将反恐插入到天津前面"  id="b4"/>
-		 <ul id="city">
-		 	 <li id="bj" name="beijing">北京</li>
-			 <li id="tj" name="tianjin">天津</li>
-			 <li id="cq" name="chongqing">重庆</li>
-		 </ul>
-		 
-		 
-		  <ul id="love">
-		 	 <li id="fk" name="fankong">反恐</li>
-			 <li id="xj" name="xingji">星际</li>
-		 </ul>
-		
-		<div id="foo1">Hello1</div> 
-       
-	</body>
-	
-	
-   
+            9.remove():移除元素
+                * 对象.remove():将对象移除
+            10.empty():清空元素的所有子元素
+                * 对象.empty():将对象的后代元素全部清空，但是保留当前对象以及其属性节点
+
+
+         */
+        $(function () {
+
+            // <input type="button" value="将反恐放置到city的后面"  id="b1"/>
+                $("#b1").click(function () {
+
+                    var city = $("#city");
+                    var fk = $("#fk");
+                    city.append(fk);
+
+                });
+            // <input type="button" value="将反恐放置到city的最前面"  id="b2"/>
+            $("#b2").click(function () {
+
+                var city = $("#city");
+                var fk = $("#fk");
+                city.prepend(fk);
+
+            });
+
+            // <input type="button" value="将反恐插入到天津后面"  id="b3"/>
+            $("#b3").click(function () {
+
+                var city = $("#tj");
+                var fk = $("#fk");
+                city.append(fk);
+
+            });
+
+            // <input type="button" value="将反恐插入到天津前面"  id="b4"/>
+            $("#b4").click(function () {
+
+                var tj = $("#tj");
+                var fk = $("#fk");
+                tj.prepend(fk);
+
+            });
+        })
+
+
+    </script>
+
+
+</head>
+
+<body>
+
+<input type="button" value="将反恐放置到city的后面" id="b1"/>
+<input type="button" value="将反恐放置到city的最前面" id="b2"/>
+<input type="button" value="将反恐插入到天津后面" id="b3"/>
+<input type="button" value="将反恐插入到天津前面" id="b4"/>
+<ul id="city">
+    <li id="bj" name="beijing">北京</li>
+    <li id="tj" name="tianjin">天津</li>
+    <li id="cq" name="chongqing">重庆</li>
+</ul>
+
+
+<ul id="love">
+    <li id="fk" name="fankong">反恐</li>
+    <li id="xj" name="xingji">星际</li>
+</ul>
+
+<div id="foo1">Hello1</div>
+
+</body>
+
+
 </html>
 
 

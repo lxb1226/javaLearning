@@ -11,12 +11,14 @@ import java.io.IOException;
 /**
  * cookie的快速入门
  */
-@WebServlet("/cookieDemo03")
-public class CookieDemo03 extends HttpServlet {
+@WebServlet("/cookieDemo05")
+public class CookieDemo05 extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
        Cookie c1 = new Cookie("msg", "hello");
-       Cookie c2 = new Cookie("name", "zhangsan");
+       Cookie c2 = new Cookie("name", "张三");
 
+       // 在多个web项目中共享cookie
+       c1.setPath("/");
        response.addCookie(c1);
        response.addCookie(c2);
 
